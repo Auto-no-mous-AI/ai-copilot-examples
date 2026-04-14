@@ -1,6 +1,10 @@
 name: CI
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -11,30 +15,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout examples repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: ai-copilot-examples
 
       - name: Checkout web SDK
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk
           path: ai-copilot-sdk
 
       - name: Checkout React SDK
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk-react
           path: ai-copilot-sdk-react
 
       - name: Checkout Angular SDK
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk-angular
           path: ai-copilot-sdk-angular
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
 
@@ -61,3 +65,4 @@ jobs:
       - name: Build angular example
         working-directory: ai-copilot-examples/angular-example
         run: npm ci && npm run build
+

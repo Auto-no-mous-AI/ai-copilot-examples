@@ -1,4 +1,7 @@
 # AI Copilot Examples
+[![CI](https://github.com/Auto-no-mous-AI/ai-copilot-examples/actions/workflows/ci.yml/badge.svg)](https://github.com/Auto-no-mous-AI/ai-copilot-examples/actions/workflows/ci.yml) [![Release](https://github.com/Auto-no-mous-AI/ai-copilot-examples/actions/workflows/release.yml/badge.svg)](https://github.com/Auto-no-mous-AI/ai-copilot-examples/actions/workflows/release.yml)
+
+
 
 Reference host applications for embedding the AI Copilot widget into vanilla JavaScript, React, and Angular apps.
 
@@ -34,3 +37,9 @@ The mock API defaults to `http://127.0.0.1:4010`.
 - generates a local secrets manifest in the sibling infra repo
 - installs all example app dependencies
 - leaves the workspace ready for local widget testing
+
+## CI And Release
+
+- Manual CI trigger is available through the CI workflow in GitHub Actions.
+- Release instructions live in [docs/releasing.md](./docs/releasing.md).
+
