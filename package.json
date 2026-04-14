@@ -1,0 +1,8 @@
+{
+  "name": "ai-copilot-examples",
+  "private": true,
+  "scripts": {
+    "bootstrap:local": "powershell -ExecutionPolicy Bypass -File ./scripts/bootstrap-local.ps1",
+    "mock:api": "node ./shared-mocks/mock-api.mjs"
+  }
+}

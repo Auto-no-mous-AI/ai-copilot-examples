@@ -1,0 +1,17 @@
+{
+  "name": "copilot-vanilla-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@auto-no-mous/copilot-web": "file:../../ai-copilot-sdk"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

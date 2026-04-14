@@ -1,0 +1,25 @@
+name: Release Bundle
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create source bundle
+        run: |
+          mkdir -p dist
+          tar -czf dist/ai-copilot-examples.tar.gz README.md docs shared-mocks vanilla-example react-example angular-example scripts package.json
+
+      - name: Upload bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-copilot-examples-bundle
+          path: dist/ai-copilot-examples.tar.gz

@@ -1,0 +1,22 @@
+:root {
+  color: #e2e8f0;
+  background: radial-gradient(circle at top, #1f2a7a, #0f172a 58%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 24px;
+  padding: 32px;
+}

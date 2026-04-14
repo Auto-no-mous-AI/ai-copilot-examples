@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(145deg, #0f172a, #1e293b 58%, #14532d);
+  color: #e2e8f0;
+}
+
+.shell {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.panel {
+  border-radius: 24px;
+  padding: 32px;
+  background: rgba(15, 23, 42, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
