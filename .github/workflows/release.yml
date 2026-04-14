@@ -12,18 +12,26 @@ on:
 jobs:
   bundle:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Create source bundle
+      - name: Create bundle
         run: |
           mkdir -p dist
           tar -czf dist/ai-copilot-examples.tar.gz README.md docs shared-mocks vanilla-example react-example angular-example scripts package.json
 
-      - name: Upload bundle
+      - name: Upload bundle artifact
         uses: actions/upload-artifact@v4
         with:
           name: ai-copilot-examples-bundle
           path: dist/ai-copilot-examples.tar.gz
 
+      - name: Create GitHub release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/ai-copilot-examples.tar.gz
+          generate_release_notes: true
