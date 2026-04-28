@@ -15,24 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout examples repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: ai-copilot-examples
 
       - name: Checkout web SDK
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk
           path: ai-copilot-sdk
 
       - name: Checkout React SDK
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk-react
           path: ai-copilot-sdk-react
 
       - name: Checkout Angular SDK
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: Auto-no-mous-AI/ai-copilot-sdk-angular
           path: ai-copilot-sdk-angular
